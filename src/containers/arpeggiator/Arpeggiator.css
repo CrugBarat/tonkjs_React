@@ -1,4 +1,4 @@
-.controls-container {
+.arpeggiator-controls-container {
   display: inline-block;
   border: solid;
   width: 400px;
@@ -103,7 +103,7 @@ label:hover {
   border-color: #1be7ff;
 }
 
-.sliders-container {
+.arpeggiator-sliders-container {
   border: solid 1px white;
   width: 260px;
   float: left;
@@ -111,14 +111,14 @@ label:hover {
   margin-bottom: 30px;
 }
 
-.slider-value {
+.arpeggiator-slider-value {
   width: 60px;
   font-size: 14px;
   float: left;
   margin-top: 7px;
 }
 
-.slider-container {
+.arpeggiator-slider-container {
   width: 190px;
   float: left;
   margin-top: 5px;
@@ -126,7 +126,7 @@ label:hover {
   margin-left: 2px;
 }
 
-.values-border {
+.arpeggiator-values-border {
   display: inline-block;
   border: solid 1px white;
   width: 300px;
@@ -134,7 +134,7 @@ label:hover {
   margin: 20px;
 }
 
-.values-container {
+.arpeggiator-values-container {
   background-color: #98F9A8;
   font-family: 'digital';
   color: black;
@@ -147,40 +147,40 @@ h3, p {
   padding: 0;
 }
 
-.values {
+.arpeggiator-values {
   width: 75px;
   float: left;
   font-size: 45px;
 }
 
-.units {
+.arpeggiator-units {
   font-size: 20px;
 }
 
-.media-border {
+.arpeggiator-media-border {
   border: solid 1px white;
   width: 90px;
   float: left;
   margin-right: 10px;
 }
 
-.media-controls-container {
+.arpeggiator-media-controls-container {
   border: solid 1px white;
   margin: 5px;
   overflow: auto;
 }
 
-.controls-title {
+.arpeggiator-controls-title {
   margin-bottom: 5px;
 }
 
-.main-control {
+.arpeggiator-main-control {
   margin: 10px 0px 10px 10px;
   width: 40px;
   float: left;
 }
 
-button[name="play"] {
+button[name="play"].arpeggiator {
   border-style: solid;
   border-width: 15px 0 15px 30px;
   border-color: transparent transparent transparent #E830CE;
@@ -198,12 +198,12 @@ button[name="play"]:focus {
   }
 }
 
-.sub-controls {
+.arpeggiator-sub-controls {
   float: left;
   width: 20px;
 }
 
-button[name="record"] {
+button[name="record"].arpeggiator {
   border: solid #1be7ff;
   width: 18px;
   height: 18px;
@@ -225,7 +225,7 @@ button[name="record"]:focus {
   }
 }
 
-button[name="stop"] {
+button[name="stop"].arpeggiator {
   border: solid #9201ff;
   width: 18px;
   height: 18px;

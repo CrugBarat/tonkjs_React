@@ -161,91 +161,91 @@ export default function Arpeggiator() {
     }
   }
 
-    return (
-      <Fragment>
-      <section className="controls-container">
-          <div>
-            <input id="c1" value="1" type="radio" name="chord" />
-            <label onClick={() => handleChord(1)} className="c1" htmlFor="c1"></label>
-            <input id="c2" value="2" type="radio" name="chord" />
-            <label onClick={() => handleChord(2)} className="c2" htmlFor="c2"></label>
-            <input id="c3" value="3" type="radio" name="chord" />
-            <label onClick={() => handleChord(3)} className="c3" htmlFor="c3"></label>
-            <input id="c4" value="4" type="radio" name="chord" />
-            <label onClick={() => handleChord(4)} className="c4" htmlFor="c4"></label>
-            <input id="c5" value="5" type="radio" name="chord" />
-            <label onClick={() => handleChord(5)} className="c5" htmlFor="c5"></label>
+  return (
+    <Fragment>
+    <section className="arpeggiator-controls-container">
+        <div>
+          <input id="c1" value="1" type="radio" name="chord" />
+          <label onClick={() => handleChord(1)} className="c1" htmlFor="c1"></label>
+          <input id="c2" value="2" type="radio" name="chord" />
+          <label onClick={() => handleChord(2)} className="c2" htmlFor="c2"></label>
+          <input id="c3" value="3" type="radio" name="chord" />
+          <label onClick={() => handleChord(3)} className="c3" htmlFor="c3"></label>
+          <input id="c4" value="4" type="radio" name="chord" />
+          <label onClick={() => handleChord(4)} className="c4" htmlFor="c4"></label>
+          <input id="c5" value="5" type="radio" name="chord" />
+          <label onClick={() => handleChord(5)} className="c5" htmlFor="c5"></label>
+        </div>
+        <div>
+          <input id="c6" value="6" type="radio" name="chord" />
+          <label onClick={() => handleChord(6)} className="c6" htmlFor="c6"></label>
+          <input id="c7" value="7" type="radio" name="chord" />
+          <label onClick={() => handleChord(7)} className="c7" htmlFor="c7"></label>
+          <input id="c8" value="8" type="radio" name="chord" />
+          <label onClick={() => handleChord(8)} className="c8" htmlFor="c8"></label>
+          <input id="c9" value="9" type="radio" name="chord" />
+          <label onClick={() => handleChord(9)} className="c9" htmlFor="c9"></label>
+          <input id="c10" value="10" type="radio" name="chord" />
+          <label onClick={() => handleChord(10)} className="c10" htmlFor="c10"></label>
+        </div>
+        <div>
+          <input id="c11" value="11" type="radio" name="chord" />
+          <label onClick={() => handleChord(11)} className="c11" htmlFor="c11"></label>
+          <input id="c12" value="12" type="radio" name="chord" />
+          <label onClick={() => handleChord(12)} className="c12" htmlFor="c12"></label>
+          <input id="c13" value="13" type="radio" name="chord" />
+          <label onClick={() => handleChord(13)} className="c13" htmlFor="c13"></label>
+          <input id="c14" value="14" type="radio" name="chord" />
+          <label onClick={() => handleChord(14)} className="c14" htmlFor="c14"></label>
+          <input id="c15" value="15" type="radio" name="chord" />
+          <label onClick={() => handleChord(15)} className="c15" htmlFor="c15"></label>
+        </div>
+        <div className="arpeggiator-values-border">
+          <div className="arpeggiator-values-container">
+            <h3 className="arpeggiator-values">{bpm} <p className="arpeggiator-units">BPM</p></h3>
+            <h3 className="arpeggiator-values">{order} <p className="arpeggiator-units">ORDER</p></h3>
+            <h3 className="arpeggiator-values">{swing} <p className="arpeggiator-units">Swing</p></h3>
+            <h3 className="arpeggiator-values">{gain} <p className="arpeggiator-units">Gain</p></h3>
           </div>
-          <div>
-            <input id="c6" value="6" type="radio" name="chord" />
-            <label onClick={() => handleChord(6)} className="c6" htmlFor="c6"></label>
-            <input id="c7" value="7" type="radio" name="chord" />
-            <label onClick={() => handleChord(7)} className="c7" htmlFor="c7"></label>
-            <input id="c8" value="8" type="radio" name="chord" />
-            <label onClick={() => handleChord(8)} className="c8" htmlFor="c8"></label>
-            <input id="c9" value="9" type="radio" name="chord" />
-            <label onClick={() => handleChord(9)} className="c9" htmlFor="c9"></label>
-            <input id="c10" value="10" type="radio" name="chord" />
-            <label onClick={() => handleChord(10)} className="c10" htmlFor="c10"></label>
-          </div>
-          <div>
-            <input id="c11" value="11" type="radio" name="chord" />
-            <label onClick={() => handleChord(11)} className="c11" htmlFor="c11"></label>
-            <input id="c12" value="12" type="radio" name="chord" />
-            <label onClick={() => handleChord(12)} className="c12" htmlFor="c12"></label>
-            <input id="c13" value="13" type="radio" name="chord" />
-            <label onClick={() => handleChord(13)} className="c13" htmlFor="c13"></label>
-            <input id="c14" value="14" type="radio" name="chord" />
-            <label onClick={() => handleChord(14)} className="c14" htmlFor="c14"></label>
-            <input id="c15" value="15" type="radio" name="chord" />
-            <label onClick={() => handleChord(15)} className="c15" htmlFor="c15"></label>
-          </div>
-          <div className="values-border">
-            <div className="values-container">
-              <h3 className="values">{bpm} <p className="units">BPM</p></h3>
-              <h3 className="values">{order} <p className="units">ORDER</p></h3>
-              <h3 className="values">{swing} <p className="units">Swing</p></h3>
-              <h3 className="values">{gain} <p className="units">Gain</p></h3>
+        </div>
+        <div className="arpeggiator-sliders-container">
+            <div className="arpeggiator-slider-value">
+              <p>BPM</p>
+            </div>
+            <div className="arpeggiator-slider-container">
+              <Slider styleName={"bpm-slider"} min={1} max={180} step={1} value={bpm} update={updateBPM} />
+            </div>
+            <div className="arpeggiator-slider-value">
+              <p>SWING</p>
+            </div>
+            <div className="arpeggiator-slider-container">
+              <Slider styleName={"swing-slider"} min={0.0} max={1.0} step={0.1} value={swing} update={updateSwing} />
+            </div>
+            <div className="arpeggiator-slider-value">
+              <p>GAIN</p>
+            </div>
+            <div className="arpeggiator-slider-container">
+              <Slider styleName={"gain-slider"} min={0.1} max={1.0} step={0.1} value={gain} update={updateGain} />
             </div>
           </div>
-          <div className="sliders-container">
-              <div className="slider-value">
-                <p>BPM</p>
+          <div className="arpeggiator-media-border">
+            <div className="arpeggiator-media-controls-container">
+              <div className="arpeggiator-main-control">
+                <button className="arpeggiator" name="play" onClick={startSynth}></button>
               </div>
-              <div className="slider-container">
-                <Slider styleName={"bpm-slider"} min={1} max={180} step={1} value={bpm} update={updateBPM} />
-              </div>
-              <div className="slider-value">
-                <p>SWING</p>
-              </div>
-              <div className="slider-container">
-                <Slider styleName={"swing-slider"} min={0.0} max={1.0} step={0.1} value={swing} update={updateSwing} />
-              </div>
-              <div className="slider-value">
-                <p>GAIN</p>
-              </div>
-              <div className="slider-container">
-                <Slider styleName={"gain-slider"} min={0.1} max={1.0} step={0.1} value={gain} update={updateGain} />
-              </div>
-            </div>
-            <div className="media-border">
-              <div className="media-controls-container">
-                <div className="main-control">
-                  <button name="play" onClick={startSynth}></button>
+              <div className="arpeggiator-sub-controls">
+                <div>
+                  <button className="arpeggiator" name="record" onClick={recordStart}></button>
                 </div>
-                <div className="sub-controls">
-                  <div>
-                    <button name="record" onClick={recordStart}></button>
-                  </div>
-                  <div>
-                    <button name="stop" onClick={stopMedia}></button>
-                  </div>
+                <div>
+                  <button className="arpeggiator" name="stop" onClick={stopMedia}></button>
                 </div>
               </div>
             </div>
-          <Select choices={synthChoices} onSelect={onSynthSelect} name={"Synths"} />
-          <Select choices={durationChoices} onSelect={onDurationSelect} name={"Rate"} />
-      </section>
-      </Fragment>
-    )
+          </div>
+        <Select choices={synthChoices} onSelect={onSynthSelect} name={"Synths"} />
+        <Select choices={durationChoices} onSelect={onDurationSelect} name={"Rate"} />
+    </section>
+    </Fragment>
+  )
 }
