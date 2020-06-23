@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import Tone from 'tone';
-import mapChords from '../helpers/MapChords';
+import mapChords from '../helpers/arpeggiator/mapChords';
 import SynthChoices from '../config/SynthChoices';
 import DurationChoices from '../config/DurationChoices';
 import Select from '../components/Select';
