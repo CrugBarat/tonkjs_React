@@ -186,7 +186,7 @@ export default function StepSequencer() {
         link.style.cssText = "font-size: 20px; color: white;"
         link.href = audioURL;
         link.download = 'my_recording';
-        link.innerHTML = 'DOWNLOAD FILE';
+        link.innerHTML = '&nbsp; DOWNLOAD &nbsp;';
         document.body.appendChild(link);
       };
     }

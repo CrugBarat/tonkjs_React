@@ -16,7 +16,7 @@ export default function DrumMachine() {
   const [playing, setPlaying] = useState(false);
   const [eventID, setEventID] = useState(0);
   const [bpm, setBpm] = useState(120);
-  const [swing, setSwing] = useState(0.0);
+  const [distortion, setDistortion] = useState(0.0);
   const [gain, setGain] = useState(1.0);
   const [delay, setDelay] = useState(0.0);
   const [sampleChoices] = useState(['808']);
@@ -88,9 +88,11 @@ export default function DrumMachine() {
     Tone.Transport.bpm.value = bpm;
   }
 
-  function updateSwing(swing) {
-    setSwing(parseFloat(swing));
-    Tone.Transport.swing = swing;
+  function updateDistortion(distortion) {
+    sampler.disconnect();
+    setDistortion(parseFloat(distortion));
+    const dist = new Tone.Distortion(distortion).toMaster();
+    sampler.connect(dist);
   }
 
   function updateGain(gain) {
@@ -109,10 +111,11 @@ export default function DrumMachine() {
     sampler.connect(pingPong);
   }
 
-  function resetDelay() {
+  function resetEffects() {
     sampler.disconnect();
     sampler.toMaster();
     setDelay(0);
+    setDistortion(0);
   }
 
   function recordStart() {
@@ -138,7 +141,7 @@ export default function DrumMachine() {
         link.style.cssText = "font-size: 20px; color: white;"
         link.href = audioURL;
         link.download = 'my_recording';
-        link.innerHTML = 'DOWNLOAD FILE';
+        link.innerHTML = '&nbsp; DOWNLOAD &nbsp;';
         document.body.appendChild(link);
       };
     }
@@ -223,7 +226,7 @@ export default function DrumMachine() {
           <div className="drum-machine-values-border">
             <div className="drum-machine-values-container">
               <h3 className="drum-machine-values">{kit} <p className="drum-machine-units">Kit</p></h3>
-              <h3 className="drum-machine-values">{swing} <p className="drum-machine-units">Swing</p></h3>
+              <h3 className="drum-machine-values">{distortion} <p className="drum-machine-units">Distortion</p></h3>
               <h3 className="drum-machine-values">{delay} <p className="drum-machine-units">Delay</p></h3>
               <h3 className="drum-machine-values">{gain} <p className="drum-machine-units">Gain</p></h3>
               <h3 className="drum-machine-values">{bpm} <p className="drum-machine-units">BPM</p></h3>
@@ -253,10 +256,10 @@ export default function DrumMachine() {
                 <Slider styleName={"bpm-slider"} min={1} max={180} step={1} value={bpm} update={updateBPM} />
               </div>
               <div className="drum-machine-slider-value">
-                <p>SWING</p>
+                <p>DIST</p>
               </div>
               <div className="drum-machine-slider-container">
-                <Slider styleName={"swing-slider"} min={0.0} max={1.0} step={0.1} value={swing} update={updateSwing} />
+                <Slider styleName={"swing-slider"} min={0.0} max={1.0} step={0.1} value={distortion} update={updateDistortion} />
               </div>
               <div className="drum-machine-slider-value">
                 <p>DELAY</p>
@@ -273,7 +276,7 @@ export default function DrumMachine() {
             </div>
           <div>
             <div className="drum-machine-reset-but-container">
-              <button className="drum-machine-destroy-buttons drum-machine-reset-buttons" onClick={resetDelay}>RESET DELAY</button>
+              <button className="drum-machine-destroy-buttons drum-machine-reset-buttons" onClick={resetEffects}>RESET</button>
             </div>
             <div className="drum-machine-clear-but-container">
               <button className="drum-machine-destroy-buttons drum-machine-clear-button" onClick={clearDrumMachine}>CLEAR</button>
