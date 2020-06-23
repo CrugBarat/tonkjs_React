@@ -1,13 +1,13 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import Tone from 'tone';
 import './DrumMachine.css';
-import SampleArray from '../config/drum_machine/SampleArray';
-import Select from '../components/Select';
-import Slider from '../components/Slider';
-import kick from '../assets/sounds/kick.wav';
-import hat from '../assets/sounds/hat.wav';
-import snare from '../assets/sounds/snare.wav';
-import tom from '../assets/sounds/tom.wav';
+import SampleArray from '../../config/drum_machine/SampleArray';
+import Select from '../../components/Select';
+import Slider from '../../components/Slider';
+import kick from '../../assets/sounds/kick.wav';
+import hat from '../../assets/sounds/hat.wav';
+import snare from '../../assets/sounds/snare.wav';
+import tom from '../../assets/sounds/tom.wav';
 
 export default function DrumMachine() {
   const [samples] = useState(SampleArray);
