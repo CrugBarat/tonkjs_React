@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'digital';
-  src: url('../../assets/fonts/digital.ttf');
-}
-
-input[type='checkbox'] {
+input[type='checkbox'].drum-machine-rows {
     -webkit-appearance:none;
     width: 50px;
     height: 50px;
@@ -22,19 +17,19 @@ input[type='checkbox']:hover, button:hover, select:hover, .controls-container {
   cursor: pointer;
 }
 
-.row1:checked {
+#row1:checked {
     background: #16E6CC;
 }
 
-.row2:checked {
+#row2:checked {
     background: #FF6A63;
 }
 
-.row3:checked {
+#row3:checked {
     background: #E830CE;
 }
 
-.row4:checked {
+#row4:checked {
     background: #9201ff;
 }
 
@@ -202,6 +197,8 @@ button {
 
 .drum-machine-reset-buttons {
   margin-top: 30px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .drum-machine-clear-button {

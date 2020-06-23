@@ -147,76 +147,76 @@ export default function DrumMachine() {
     <Fragment>
       <section className="drum-machine-controls-container">
         <div>
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
-          <input className="row1" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
+          <input id="row1" className="drum-machine-rows" type="checkbox" />
         </div>
         <div>
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
-          <input className="row2" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
+          <input id="row2" className="drum-machine-rows" type="checkbox" />
         </div>
         <div>
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
-          <input className="row3" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
+          <input id="row3" className="drum-machine-rows" type="checkbox" />
         </div>
         <div>
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
-          <input className="row4" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
+          <input id="row4" className="drum-machine-rows" type="checkbox" />
         </div>
 
           <div className="drum-machine-values-border">
