@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from './views/Home';
 import About from './views/About';
 import SelectWeapon from './views/SelectWeapon';
-import Arpeggiator from './containers/Arpeggiator';
+import Arpeggiator from './containers/arpeggiator/Arpeggiator';
+import DrumMachine from './containers/drum_machine/DrumMachine';
 import './App.css';
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/arpeggiator">
           <Arpeggiator />
+        </Route>
+        <Route path="/drum_machine">
+          <DrumMachine />
         </Route>
         <Route path="/">
           <Home />
