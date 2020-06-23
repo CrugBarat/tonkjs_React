@@ -5,3 +5,8 @@ body {
   background-color: #202020;
   font-family: 'Orbitron', sans-serif;
 }
+
+@font-face {
+  font-family: 'digital';
+  src: url('./assets/fonts/digital.ttf');
+}

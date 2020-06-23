@@ -11,11 +11,6 @@ label:hover, button:hover, select:hover, .controls-container {
   cursor: pointer;
 }
 
-@font-face {
-  font-family: 'digital';
-  src: url('../assets/fonts/digital.ttf');
-}
-
 input[type=radio] {
   display: none;
 }
