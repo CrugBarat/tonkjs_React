@@ -5,6 +5,7 @@ import About from './views/About';
 import SelectWeapon from './views/SelectWeapon';
 import Arpeggiator from './containers/arpeggiator/Arpeggiator';
 import DrumMachine from './containers/drum_machine/DrumMachine';
+import StepSequencer from './containers/step_sequencer/StepSequencer';
 import './App.css';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/drum_machine">
           <DrumMachine />
+        </Route>
+        <Route path="/step_sequencer">
+          <StepSequencer />
         </Route>
         <Route path="/">
           <Home />
