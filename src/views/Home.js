@@ -1,5 +1,13 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import './Views.css'
 
 export default function Home() {
-  return <h2>HOME</h2>;
+
+  return (
+    <Fragment>
+      <div className="homepage-title-container">
+      <h3 className="homepage-title">TONK.js</h3>
+      </div>
+    </Fragment>
+  )
 }
