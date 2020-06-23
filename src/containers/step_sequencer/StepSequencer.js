@@ -17,7 +17,7 @@ export default function StepSequencer() {
   const [playing, setPlaying] = useState(false);
   const [eventID, setEventID] = useState(0);
   const [bpm, setBpm] = useState(120);
-  const [swing, setSwing] = useState(0.0);
+  const [phase, setPhase] = useState(0);
   const [gain, setGain] = useState(1.0);
   const [delay, setDelay] = useState(0.0);
   const [recDest] = useState(Tone.context.createMediaStreamDestination());
@@ -95,9 +95,11 @@ export default function StepSequencer() {
     Tone.Transport.bpm.value = bpm;
   }
 
-  function updateSwing(swing) {
-    setSwing(parseFloat(swing));
-    Tone.Transport.swing = swing;
+  function updatePhase(phase) {
+    synths.forEach(synth => synth.disconnect());
+    setPhase(parseFloat(phase));
+    const phaser = new Tone.Phaser(phase).toMaster();
+    synths.forEach(synth => synth.connect(phaser));
   }
 
   function updateGain(gain) {
@@ -277,7 +279,7 @@ export default function StepSequencer() {
           <div className="step-sequencer-values-border">
             <div className="step-sequencer-values-container">
               <h3 className="step-sequencer-values">{currentNote} <p className="step-sequencer-units">Note</p></h3>
-              <h3 className="step-sequencer-values">{swing} <p className="step-sequencer-units">Swing</p></h3>
+              <h3 className="step-sequencer-values">{phase} <p className="step-sequencer-units">Phase</p></h3>
               <h3 className="step-sequencer-values">{delay} <p className="step-sequencer-units">Delay</p></h3>
               <h3 className="step-sequencer-values">{gain} <p className="step-sequencer-units">Gain</p></h3>
               <h3 className="step-sequencer-values">{bpm} <p className="step-sequencer-units">BPM</p></h3>
@@ -291,10 +293,10 @@ export default function StepSequencer() {
             <Slider styleName={"bpm-slider"} min={1} max={180} step={1} value={bpm} update={updateBPM} />
             </div>
             <div className="step-sequencer-slider-value">
-              <p>SWING</p>
+              <p>PHASE</p>
             </div>
             <div className="step-sequencer-slider-container">
-              <Slider styleName={"swing-slider"} min={0.0} max={1.0} step={0.1} value={swing} update={updateSwing} />
+              <Slider styleName={"swing-slider"} min={0} max={100} step={5} value={phase} update={updatePhase} />
             </div>
             <div className="step-sequencer-slider-value">
               <p>DELAY</p>
