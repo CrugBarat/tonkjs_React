@@ -17,7 +17,7 @@ export default function Arpeggiator() {
   const [durationChoices] = useState(DurationChoices);
   const [eventID, setEventID] = useState(0);
   const [bpm, setBpm] = useState(120);
-  const [swing, setSwing] = useState(0.0);
+  const [chorus, setChorus] = useState(0.0);
   const [gain, setGain] = useState(1.0);
   const [recDest] = useState(Tone.context.createMediaStreamDestination());
   const [recorder, setRecorder] = useState(null);
@@ -104,9 +104,11 @@ export default function Arpeggiator() {
     Tone.Transport.bpm.value = bpm;
   }
 
-  function updateSwing(swing) {
-    setSwing(parseFloat(swing));
-    Tone.Transport.swing = swing;
+  function updateChorus(chorus) {
+    synth.disconnect();
+    setChorus(parseFloat(chorus));
+    const chor = new Tone.Chorus(1.5, 3.5, chorus).toMaster();
+    synth.connect(chor);
   }
 
   function updateGain(gain) {
@@ -205,7 +207,7 @@ export default function Arpeggiator() {
           <div className="arpeggiator-values-container">
             <h3 className="arpeggiator-values">{bpm} <p className="arpeggiator-units">BPM</p></h3>
             <h3 className="arpeggiator-values">{order} <p className="arpeggiator-units">ORDER</p></h3>
-            <h3 className="arpeggiator-values">{swing} <p className="arpeggiator-units">Swing</p></h3>
+            <h3 className="arpeggiator-values">{chorus} <p className="arpeggiator-units">Chorus</p></h3>
             <h3 className="arpeggiator-values">{gain} <p className="arpeggiator-units">Gain</p></h3>
           </div>
         </div>
@@ -217,10 +219,10 @@ export default function Arpeggiator() {
               <Slider styleName={"bpm-slider"} min={1} max={180} step={1} value={bpm} update={updateBPM} />
             </div>
             <div className="arpeggiator-slider-value">
-              <p>SWING</p>
+              <p>CHOR</p>
             </div>
             <div className="arpeggiator-slider-container">
-              <Slider styleName={"swing-slider"} min={0.0} max={1.0} step={0.1} value={swing} update={updateSwing} />
+              <Slider styleName={"swing-slider"} min={0.0} max={1.0} step={0.1} value={chorus} update={updateChorus} />
             </div>
             <div className="arpeggiator-slider-value">
               <p>GAIN</p>
