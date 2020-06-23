@@ -25,11 +25,15 @@ header {
   position: fixed;
   background-color: #202020;
   width: 100%;
+  height: 100px;
+  z-index: 99;
 }
 
 main {
+  padding-top: 110px;
   display: block;
   text-align: center;
+  z-index: 1;
 }
 
 .select-title-container {
