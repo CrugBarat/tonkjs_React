@@ -12,7 +12,6 @@ export default function Arpeggiator() {
   const [chordIndex, setChordIndex] = useState(0);
   const [formattedChords] = useState(mapChords);
   const [playing, setPlaying] = useState(false);
-  const [step, setStep] = useState(0);
   const [duration, setDuration] = useState('16n');
   const [synthChoices] = useState(SynthChoices);
   const [durationChoices] = useState(DurationChoices);
@@ -25,6 +24,8 @@ export default function Arpeggiator() {
   const [recording, setRecording] = useState(false);
   const [order, setOrder] = useState('UP');
 
+  let step = 0;
+
   function handleChord(value) {
     setChordIndex(parseInt(value) - 1);
     getOrder(parseInt(value) - 1);
@@ -34,7 +35,7 @@ export default function Arpeggiator() {
     let chord = formattedChords[chordIndex];
     let note = chord[step % chord.length];
     synth.triggerAttackRelease(note, duration, time);
-    setStep(step + 1);
+    step++;
   }
 
   function startSynth() {

@@ -13,7 +13,6 @@ export default function DrumMachine() {
   const [samples] = useState(SampleArray);
   const [sampler] = useState(new Tone.Sampler({"E1": kick, "E3": snare, "E5": hat, "E2": tom}));
   const [rows, setRows] = useState(document.body.querySelectorAll('div > div'));
-  const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [eventID, setEventID] = useState(0);
   const [bpm, setBpm] = useState(120);
@@ -25,6 +24,8 @@ export default function DrumMachine() {
   const [recDest] = useState(Tone.context.createMediaStreamDestination());
   const [recorder, setRecorder] = useState(null);
   const [recording, setRecording] = useState(false);
+
+  let index = 0;
 
   useEffect(() => {getRows()}, []);
 
@@ -44,7 +45,7 @@ export default function DrumMachine() {
         sampler.triggerAttackRelease(Object.keys(sample[0]), '16n');
       }
     }
-    setIndex(index + 1);
+    index++;
   }
 
   function startDrumMachine() {
@@ -63,7 +64,7 @@ export default function DrumMachine() {
   function stopDrumMachine() {
     Tone.Transport.stop();
     Tone.Transport.clear(eventID);
-    setIndex(0);
+    index = 0
     setPlaying(false);
   }
 

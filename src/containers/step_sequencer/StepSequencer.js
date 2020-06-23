@@ -14,7 +14,6 @@ export default function StepSequencer() {
   const [synthChoices] = useState(SynthChoices);
   const [currentNote, setCurrentNote] = useState('C3');
   const [rows, setRows] = useState(document.body.querySelectorAll('div > div'));
-  const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [eventID, setEventID] = useState(0);
   const [bpm, setBpm] = useState(120);
@@ -24,6 +23,8 @@ export default function StepSequencer() {
   const [recDest] = useState(Tone.context.createMediaStreamDestination());
   const [recorder, setRecorder] = useState(null);
   const [recording, setRecording] = useState(false);
+
+  let index = 0;
 
   useEffect(() => {
     getRows();
@@ -58,7 +59,7 @@ export default function StepSequencer() {
   function stopSynth() {
     Tone.Transport.stop();
     Tone.Transport.clear(eventID);
-    setIndex(0);
+    index = 0;
     setPlaying(false);
   }
 
@@ -78,7 +79,7 @@ export default function StepSequencer() {
       let input = row.querySelector(`input:nth-child(${step + 1})`);
       if (input.checked) synth.triggerAttackRelease(note, '8n');
     }
-    setIndex(index + 1);
+    index++;
   }
 
   function clearSequencer() {
