@@ -1,3 +1,4 @@
+/* HOMPAGE START */
 .homepage-title-container {
   width: 100vw;
   height: 100vh;
@@ -16,3 +17,42 @@
   font-family: 'Russo One', sans-serif;
   text-shadow: 2px 2px 4px #000000;
 }
+/* HOMEPAGE END */
+
+
+/* SELECT START */
+header {
+  position: fixed;
+  background-color: #202020;
+  width: 100%;
+}
+
+main {
+  display: block;
+  text-align: center;
+}
+
+.select-title-container {
+  margin: 20px;
+  overflow: auto;
+}
+
+.select-title {
+  float: left;
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: 0.1px solid grey;
+  width: 100%;
+}
+
+p.select-tonk-box {
+  padding: 0;
+  margin: 0px 0px 20px 0px;
+  font-size: 35px;
+}
+
+/* SELECT END */

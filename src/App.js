@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from './views/Home';
 import About from './views/About';
-import SelectWeapon from './views/SelectWeapon';
+import SelectTonk from './views/SelectTonk';
 import Arpeggiator from './containers/arpeggiator/Arpeggiator';
 import DrumMachine from './containers/drum_machine/DrumMachine';
 import StepSequencer from './containers/step_sequencer/StepSequencer';
@@ -16,7 +16,7 @@ function App() {
           <About />
         </Route>
         <Route path="/select">
-          <SelectWeapon />
+          <SelectTonk />
         </Route>
         <Route path="/arpeggiator">
           <Arpeggiator />

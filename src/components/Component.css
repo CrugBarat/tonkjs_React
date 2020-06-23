@@ -68,3 +68,132 @@ input[type=range].delay-slider {
 input[type=range].gain-slider {
   background: #FF6A63;
 }
+
+/* TONKBOX START */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* STEP */
+.tonk-box {
+  display: inline-block;
+  width: 300px;
+  height: 450px;
+  margin: 25px;
+  border: solid 1px #202020;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tonk-box-image {
+  width: 300px;
+  height: 450px;
+}
+
+.caption-style img{
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	z-index: 4;
+}
+
+.caption-style:hover .caption{
+	opacity: 1;
+}
+
+.caption-style .caption{
+	cursor: pointer;
+	position: absolute;
+	opacity: 0;
+	transition:all 0.45s ease-in-out;
+}
+
+.caption-style .blur{
+	background-color: rgba(0,0,0,0.65);
+	height: 450px;
+	width: 300px;
+	z-index: 5;
+	position: absolute;
+}
+
+.caption-style .caption-text {
+	font-size: 24px;
+}
+
+.caption-style .caption-text{
+	z-index: 10;
+	color: #fff;
+	position: absolute;
+	width: 300px;
+	height: 450px;
+	text-align: center;
+  top: 75px;
+}
+
+/* DRUM */
+.drum-tonk-box {
+  display: inline-block;
+  width: 500px;
+  height: 450px;
+  margin: 25px;
+  border: solid 1px #202020;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.drum-tonk-box-image {
+  width: 500px;
+  height: 450px;
+}
+
+.drum-caption-style img{
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	z-index: 4;
+}
+
+.drum-caption-style:hover .drum-caption{
+	opacity: 1;
+}
+
+.drum-caption-style .drum-caption{
+	cursor: pointer;
+	position: absolute;
+	opacity: 0;
+	transition:all 0.45s ease-in-out;
+}
+
+.drum-caption-style .drum-blur{
+	background-color: rgba(0,0,0,0.65);
+	height: 450px;
+	width: 500px;
+	z-index: 5;
+	position: absolute;
+}
+
+.drum-caption-style .drum-caption-text {
+	font-size: 24px;
+}
+
+.drum-caption-style .drum-caption-text{
+	z-index: 10;
+	color: #fff;
+	position: absolute;
+	width: 500px;
+	height: 450px;
+	text-align: center;
+  top: 75px;
+}
+
+.tonk-box-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+/* TONKBOX END */
