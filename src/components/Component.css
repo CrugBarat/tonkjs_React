@@ -6,6 +6,19 @@
   width: 95px;
 }
 
+.select:focus {
+  outline-color: #16E6CC;
+}
+
+.sample-select {
+  background-color: black;
+  color: white;
+  float: left;
+  margin: 8px 0px 0px 45px;
+  width: 130px;
+  font-size: 20px;
+}
+
 input[type=range] {
   width: 100%;
   margin: 6.35px 0;
@@ -46,6 +59,10 @@ input[type=range].bpm-slider {
 
 input[type=range].swing-slider {
   background: #67FF6C;
+}
+
+input[type=range].delay-slider {
+  background: #E7C501;
 }
 
 input[type=range].gain-slider {

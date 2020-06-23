@@ -145,7 +145,7 @@ export default function DrumMachine() {
 
   return (
     <Fragment>
-      <section className="controls-container">
+      <section className="drum-machine-controls-container">
         <div>
           <input className="row1" type="checkbox" />
           <input className="row1" type="checkbox" />
@@ -219,66 +219,66 @@ export default function DrumMachine() {
           <input className="row4" type="checkbox" />
         </div>
 
-          <div className="values-border">
-            <div className="values-container">
-              <h3 className="values">{kit} <p className="units">Kit</p></h3>
-              <h3 className="values">{swing} <p className="units">Swing</p></h3>
-              <h3 className="values">{delay} <p className="units">Delay</p></h3>
-              <h3 className="values">{gain} <p className="units">Gain</p></h3>
-              <h3 className="values">{bpm} <p className="units">BPM</p></h3>
+          <div className="drum-machine-values-border">
+            <div className="drum-machine-values-container">
+              <h3 className="drum-machine-values">{kit} <p className="drum-machine-units">Kit</p></h3>
+              <h3 className="drum-machine-values">{swing} <p className="drum-machine-units">Swing</p></h3>
+              <h3 className="drum-machine-values">{delay} <p className="drum-machine-units">Delay</p></h3>
+              <h3 className="drum-machine-values">{gain} <p className="drum-machine-units">Gain</p></h3>
+              <h3 className="drum-machine-values">{bpm} <p className="drum-machine-units">BPM</p></h3>
             </div>
           </div>
-          <div className="media-border">
-            <div className="media-controls-container">
-              <p className="controls-title">CONTROLS</p>
-              <div className="main-control">
-                <button name="play" onClick={startDrumMachine}></button>
+          <div className="drum-machine-media-border">
+            <div className="drum-machine-media-controls-container">
+              <p className="drum-machine-controls-title">CONTROLS</p>
+              <div className="drum-machine-main-control">
+                <button className="drum-machine" name="play" onClick={startDrumMachine}></button>
               </div>
                 <div className="sub-controls">
                 <div>
-                  <button name="record" onClick={recordStart}></button>
+                  <button className="drum-machine" name="record" onClick={recordStart}></button>
                 </div>
                 <div>
-                  <button name="stop" onClick={stopMedia}></button>
+                  <button className="drum-machine" name="stop" onClick={stopMedia}></button>
                 </div>
               </div>
             </div>
           </div>
-          <div className="sliders-container">
-              <div className="slider-value">
+          <div className="drum-machine-sliders-container">
+              <div className="drum-machine-slider-value">
                 <p>BPM</p>
               </div>
-              <div className="slider-container">
+              <div className="drum-machine-slider-container">
                 <Slider styleName={"bpm-slider"} min={1} max={180} step={1} value={bpm} update={updateBPM} />
               </div>
-              <div className="slider-value">
+              <div className="drum-machine-slider-value">
                 <p>SWING</p>
               </div>
-              <div className="slider-container">
+              <div className="drum-machine-slider-container">
                 <Slider styleName={"swing-slider"} min={0.0} max={1.0} step={0.1} value={swing} update={updateSwing} />
               </div>
-              <div className="slider-value">
+              <div className="drum-machine-slider-value">
                 <p>DELAY</p>
               </div>
-              <div className="slider-container">
+              <div className="drum-machine-slider-container">
                 <Slider styleName={"delay-slider"} min={0.0} max={1.0} step={0.1} value={delay} update={updateDelay} />
               </div>
-              <div className="slider-value">
+              <div className="drum-machine-slider-value">
                 <p>GAIN</p>
               </div>
-              <div className="slider-container">
+              <div className="drum-machine-slider-container">
                 <Slider styleName={"gain-slider"} min={0.1} max={1.0} step={0.1} value={gain} update={updateGain} />
               </div>
             </div>
           <div>
-            <div className="reset-but-container">
-              <button className="destroy-buttons reset-buttons" onClick={resetDelay}>RESET DELAY</button>
+            <div className="drum-machine-reset-but-container">
+              <button className="drum-machine-destroy-buttons drum-machine-reset-buttons" onClick={resetDelay}>RESET DELAY</button>
             </div>
-            <div className="clear-but-container">
-              <button className="destroy-buttons clear-button" onClick={clearDrumMachine}>CLEAR</button>
+            <div className="drum-machine-clear-but-container">
+              <button className="drum-machine-destroy-buttons drum-machine-clear-button" onClick={clearDrumMachine}>CLEAR</button>
             </div>
             <div>
-              <Select choices={sampleChoices} name={"Kits"} />
+              <Select styleName={"sample-select"} choices={sampleChoices} name={"Kits"} />
             </div>
         </div>
       </section>

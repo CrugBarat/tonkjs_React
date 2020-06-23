@@ -11,7 +11,7 @@ const Select = (props) => {
   }
 
   return (
-    <select className="select" onChange={handleChange} defaultValue="default">
+    <select className={props.styleName} onChange={handleChange} defaultValue="default">
       <option value="default" disabled>{props.name}</option>
       {options}
     </select>
