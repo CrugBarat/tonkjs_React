@@ -1,8 +1,8 @@
 import React, {Fragment, useState} from 'react';
 import Tone from 'tone';
 import mapChords from '../helpers/arpeggiator/mapChords';
-import SynthChoices from '../config/SynthChoices';
-import DurationChoices from '../config/DurationChoices';
+import SynthChoices from '../config/arpeggiator/SynthChoices';
+import DurationChoices from '../config/arpeggiator/DurationChoices';
 import Select from '../components/Select';
 import Slider from '../components/Slider';
 import './Arpeggiator.css';
