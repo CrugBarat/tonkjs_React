@@ -1,0 +1,222 @@
+input[type='checkbox'].step-sequencer {
+    -webkit-appearance:none;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius:5px;
+    border:2px solid black;
+    margin: 1px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+input[type='checkbox']:focus {
+  outline: none;
+}
+
+input[type='checkbox']:hover, button:hover, select:hover, .controls-container {
+  cursor: pointer;
+}
+
+#step-row1:checked {
+    background: #1be7ff;
+}
+
+#step-row2:checked {
+    background: #16E6CC;
+}
+
+#step-row3:checked {
+    background: #2EF9A0;
+}
+
+#step-row4:checked {
+    background: #67FF6C;
+}
+
+#step-row5:checked {
+    background: #E7C501;
+}
+
+#step-row6:checked {
+    background: #FF6A63;
+}
+
+#step-row7:checked {
+    background: #E830CE;
+}
+
+#step-row8:checked {
+    background: #9201ff;
+}
+
+.step-sequencer-controls-container {
+  display: inline-block;
+  border: solid;
+  width: 400px;
+  background-color: black;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+.step-sequencer-values-border {
+  display: inline-block;
+  border: solid 1px white;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.step-sequencer-values-container {
+  background-color: #98F9A8;
+  font-family: 'digital';
+  color: black;
+  width: 300px;
+  overflow: auto;
+}
+
+h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.step-sequencer-values {
+  width: 60px;
+  float: left;
+  font-size: 45px;
+}
+
+.step-sequencer-units {
+  font-size: 20px;
+}
+
+.step-sequencer-media-border {
+  border: solid 1px white;
+  width: 90px;
+  float: left;
+  margin-right: 20px;
+}
+
+.step-sequencer-media-controls-container {
+  border: solid 1px white;
+  margin: 5px;
+  overflow: auto;
+}
+
+.step-sequencer-main-control {
+  margin: 10px 0px 10px 10px;
+  width: 40px;
+  float: left;
+}
+
+button[name="play"].step-sequencer {
+  border-style: solid;
+  border-width: 18px 0 18px 36px;
+  border-color: transparent transparent transparent #E830CE;
+}
+
+button[name="play"]:focus {
+  outline: 0;
+  border-color: transparent transparent transparent #67FF6C;
+  animation: play-flash 1s linear infinite;
+}
+
+@keyframes play-flash {
+  50% {
+    border-color: transparent transparent transparent transparent;
+  }
+}
+
+.step-sequencer-sub-controls {
+  float: left;
+  width: 20px;
+}
+
+button[name="record"].step-sequencer {
+  border: solid #1be7ff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #1be7ff;
+  margin: 5px 0px 5px 0px;
+}
+
+button[name="record"]:focus {
+  background-color: #FF6A63;
+  border: solid #FF6A63;
+  outline: none;
+  animation: rec-flash 1s linear infinite;
+}
+
+@keyframes rec-flash {
+  50% {
+    opacity: 0;
+  }
+}
+
+button[name="stop"].step-sequencer {
+  border: solid #9201ff;
+  width: 18px;
+  height: 18px;
+  background-color: #9201ff
+}
+
+button[name="stop"]:focus {
+  background-color: #E7C501;
+  border: solid #E7C501;
+  outline: none;
+}
+
+.step-sequencer-sliders-container {
+  border: solid 1px white;
+  width: 250px;
+  float: left;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.step-sequencer-slider-value {
+  width: 60px;
+  font-size: 16px;
+  float: left;
+  margin-top: 7px;
+}
+
+.step-sequencer-slider-container {
+  width: 170px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.step-sequencer-oct-container {
+  float: left;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.step-sequencer-oct-increase-button, .step-sequencer-oct-decrease-button {
+  font-size: 18px;
+}
+
+.step-sequencer-oct-decrease-button:focus {
+  outline: none;
+  color: #FF6A63;
+}
+
+.step-sequencer-oct-increase-button:focus {
+  outline: none;
+  color: #67FF6C;
+}
+
+.step-sequencer-destroy-buttons {
+  border: solid 1px white;
+  padding: 5px;
+  margin: 5px 0px 5px 10px;
+  font-size: 14px;
+}
+
+.step-sequencer-destroy-buttons:focus {
+  outline-color: #16E6CC;
+}
