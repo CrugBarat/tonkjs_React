@@ -1,0 +1,252 @@
+.controls-container {
+  display: inline-block;
+  border: solid;
+  width: 400px;
+  background-color: black;
+  padding-top: 20px;
+  margin-top: 20px
+}
+
+label:hover, button:hover, select:hover, .controls-container {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'digital';
+  src: url('../assets/fonts/digital.ttf');
+}
+
+input[type=radio] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  height: 100px;
+  width: 50px;
+  border: 2px solid white;
+  margin: 5px;
+  background-color: white;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+#c1:checked + .c1 {
+    background-color:#9201ff;
+    border-color: #9201ff;
+}
+
+#c6:checked + .c6 {
+    background-color:#9201ff;
+    border-color: #9201ff;
+}
+
+#c11:checked + .c11 {
+    background-color:#9201ff;
+    border-color: #9201ff;
+}
+
+#c2:checked + .c2 {
+  background-color:#E830CE;
+  border-color: #E830CE;
+}
+
+#c7:checked + .c7 {
+  background-color:#E830CE;
+  border-color: #E830CE;
+}
+
+#c12:checked + .c12 {
+  background-color:#E830CE;
+  border-color: #E830CE;
+}
+
+#c3:checked + .c3 {
+  background-color: #FF6A63;
+  border-color: #FF6A63;
+}
+
+#c8:checked + .c8 {
+  background-color: #FF6A63;
+  border-color: #FF6A63;
+}
+
+#c13:checked + .c13 {
+  background-color: #FF6A63;
+  border-color: #FF6A63;
+}
+
+#c4:checked + .c4 {
+  background-color: #67FF6C;
+  border-color: #67FF6C;
+}
+
+#c9:checked + .c9 {
+  background-color: #67FF6C;
+  border-color: #67FF6C;
+}
+
+#c14:checked + .c14 {
+  background-color: #67FF6C;
+  border-color: #67FF6C;
+}
+
+#c5:checked + .c5 {
+  background-color: #1be7ff;
+  border-color: #1be7ff;
+}
+
+#c10:checked + .c10 {
+  background-color: #1be7ff;
+  border-color: #1be7ff;
+}
+
+#c15:checked + .c15 {
+  background-color: #1be7ff;
+  border-color: #1be7ff;
+}
+
+.sliders-container {
+  border: solid 1px white;
+  width: 260px;
+  float: left;
+  margin-left: 25px;
+  margin-bottom: 30px;
+}
+
+.slider-value {
+  width: 60px;
+  font-size: 14px;
+  float: left;
+  margin-top: 7px;
+}
+
+.slider-container {
+  width: 190px;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 2px;
+}
+
+.values-border {
+  display: inline-block;
+  border: solid 1px white;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.values-container {
+  background-color: #98F9A8;
+  font-family: 'digital';
+  color: black;
+  width: 300px;
+  overflow: auto;
+}
+
+h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.values {
+  width: 75px;
+  float: left;
+  font-size: 45px;
+}
+
+.units {
+  font-size: 20px;
+}
+
+.media-border {
+  border: solid 1px white;
+  width: 90px;
+  float: left;
+  margin-right: 10px;
+}
+
+.media-controls-container {
+  border: solid 1px white;
+  margin: 5px;
+  overflow: auto;
+}
+
+.controls-title {
+  margin-bottom: 5px;
+}
+
+.main-control {
+  margin: 10px 0px 10px 10px;
+  width: 40px;
+  float: left;
+}
+
+button[name="play"] {
+  border-style: solid;
+  border-width: 15px 0 15px 30px;
+  border-color: transparent transparent transparent #E830CE;
+}
+
+button[name="play"]:focus {
+  outline: 0;
+  border-color: transparent transparent transparent #67FF6C;
+  animation: play-flash 1s linear infinite;
+}
+
+@keyframes play-flash {
+  50% {
+    border-color: transparent transparent transparent transparent;
+  }
+}
+
+.sub-controls {
+  float: left;
+  width: 20px;
+}
+
+button[name="record"] {
+  border: solid #1be7ff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #1be7ff;
+  margin: 5px 0px 5px 0px;
+}
+
+button[name="record"]:focus {
+  background-color: #FF6A63;
+  border: solid #FF6A63;
+  outline: none;
+  animation: rec-flash 1s linear infinite;
+}
+
+@keyframes rec-flash {
+  50% {
+    opacity: 0;
+  }
+}
+
+button[name="stop"] {
+  border: solid #9201ff;
+  width: 18px;
+  height: 18px;
+  background-color: #9201ff
+}
+
+button[name="stop"]:focus {
+  background-color: #E7C501;
+  border: solid #E7C501;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+}
