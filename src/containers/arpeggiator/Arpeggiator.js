@@ -251,9 +251,6 @@ export default function Arpeggiator() {
           </div>
           <div className="arpeggiator-media-border">
             <div className="arpeggiator-media-controls-container">
-              <div className="arpeggiator-main-control">
-                <button className="arpeggiator" name="play" onClick={startSynth}></button>
-              </div>
               <div className="arpeggiator-sub-controls">
                 <div>
                   <button className="arpeggiator" name="record" onClick={recordStart}></button>

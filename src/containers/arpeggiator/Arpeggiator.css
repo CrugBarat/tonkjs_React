@@ -174,42 +174,18 @@ h3, p {
   margin-bottom: 5px;
 }
 
-.arpeggiator-main-control {
-  margin: 10px 0px 10px 10px;
-  width: 40px;
-  float: left;
-}
-
-button[name="play"].arpeggiator {
-  border-style: solid;
-  border-width: 15px 0 15px 30px;
-  border-color: transparent transparent transparent #E830CE;
-}
-
-button[name="play"]:focus {
-  outline: 0;
-  border-color: transparent transparent transparent #67FF6C;
-  animation: play-flash 1s linear infinite;
-}
-
-@keyframes play-flash {
-  50% {
-    border-color: transparent transparent transparent transparent;
-  }
-}
-
 .arpeggiator-sub-controls {
-  float: left;
-  width: 20px;
+  width: 75px;
 }
 
 button[name="record"].arpeggiator {
   border: solid #1be7ff;
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background-color: #1be7ff;
-  margin: 5px 0px 5px 0px;
+  margin: 10px 5px 10px 7px;
+  float: left;
 }
 
 button[name="record"]:focus {
@@ -227,9 +203,10 @@ button[name="record"]:focus {
 
 button[name="stop"].arpeggiator {
   border: solid #9201ff;
-  width: 18px;
-  height: 18px;
-  background-color: #9201ff
+  width: 25px;
+  height: 25px;
+  background-color: #9201ff;
+  margin: 10px 5px 10px 5px;
 }
 
 button[name="stop"]:focus {
