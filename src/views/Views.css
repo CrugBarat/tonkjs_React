@@ -17,6 +17,11 @@
   font-family: 'Russo One', sans-serif;
   text-shadow: 2px 2px 4px #000000;
 }
+
+.homepage-button-container {
+  display: inline-block;
+  width: 50px;
+}
 /* HOMEPAGE END */
 
 
