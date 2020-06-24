@@ -5,7 +5,7 @@ const SynthChoices = [
                         'MembraneSynth',
                         'PluckSynth',
                         'PolySynth',
-                        'Default'
+                        'Synth'
                       ]
 
 export default SynthChoices;

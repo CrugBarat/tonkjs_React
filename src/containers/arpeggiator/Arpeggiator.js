@@ -261,7 +261,7 @@ export default function Arpeggiator() {
               </div>
             </div>
           </div>
-        <Select styleName={"select"} choices={synthChoices} onSelect={onSynthSelect} name={"Synths"} />
+        <Select styleName={"select"} choices={synthChoices} onSelect={onSynthSelect} name={"Synth"} />
         <Select styleName={"select"} choices={durationChoices} onSelect={onDurationSelect} name={"Rate"} />
         <h3 className="arp-tonk-label">TONK.js</h3>
     </section>

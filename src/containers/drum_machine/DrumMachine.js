@@ -322,7 +322,7 @@ export default function DrumMachine() {
               <button className="drum-machine-destroy-buttons drum-machine-clear-button" onClick={clearDrumMachine}>CLEAR</button>
             </div>
             <div>
-              <Select styleName={"sample-select"} choices={sampleChoices} name={"Kits"} onSelect={onSampleSelect}/>
+              <Select styleName={"sample-select"} choices={sampleChoices} name={"808"} onSelect={onSampleSelect}/>
             </div>
             <h3 className="drum-tonk-label">TONK.js</h3>
         </div>

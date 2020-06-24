@@ -331,7 +331,7 @@ export default function StepSequencer() {
               </div>
             </div>
           </div>
-          <Select styleName={"synth-select"} choices={synthChoices} onSelect={onSynthSelect} name={"Synths"} />
+          <Select styleName={"synth-select"} choices={synthChoices} onSelect={onSynthSelect} name={"PolySynth"} />
           <div className="step-sequencer-oct-container">
            <button className="step-sequencer-oct-decrease-button" onClick={reduceOctave}>-</button>
            <span> OCT </span>
