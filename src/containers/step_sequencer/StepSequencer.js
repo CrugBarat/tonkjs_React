@@ -335,9 +335,10 @@ export default function StepSequencer() {
            <span> OCT </span>
            <button className="step-sequencer-oct-increase-button" onClick={increaseOctave}>+</button>
          </div>
-          <div>
+          <div className="step-sequencer-destroy-container">
             <button className="step-sequencer-destroy-buttons" onClick={resetDelay}>RESET DELAY</button>
             <button className="step-sequencer-destroy-buttons" onClick={clearSequencer}>CLEAR</button>
+            <h3 className="step-tonk-label">TONK.js</h3>
           </div>
       </section>
     </Fragment>
