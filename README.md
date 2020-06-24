@@ -1,4 +1,4 @@
-<img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk1.png" width="300"> <img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk2.png" width="300"> <img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk3.png" width="300"> <img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk4.png" width="300"> <img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk5.png" width="300">
+<img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk1.png" width="400"> <img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk2.png" width="400"> <img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk3.png" width="400"> <img src="https://github.com/CrugBarat/my_files/blob/master/tonk/tonk4.png" width="400">
 
 
 # TONK.js
