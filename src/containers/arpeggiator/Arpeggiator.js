@@ -5,8 +5,10 @@ import SynthChoices from '../../config/arpeggiator/SynthChoices';
 import DurationChoices from '../../config/arpeggiator/DurationChoices';
 import Select from '../../components/Select';
 import Slider from '../../components/Slider';
-import BackButton from '../../components/BackButton';
+import NavButton from '../../components/NavButton';
 import './Arpeggiator.css';
+import rewind from '../../assets/images/rewind.png';
+import forward from '../../assets/images/forward.png';
 
 export default function Arpeggiator() {
   const [synth, setSynth] = useState(new Tone.Synth());
@@ -167,7 +169,8 @@ export default function Arpeggiator() {
 
   return (
     <Fragment>
-    <BackButton />
+    <NavButton name="back" link={"/select"} image={rewind} styleName={"back-button"}/>
+    <NavButton name="forward" link={"/step_sequencer"} image={forward} styleName={"forward-button"} />
     <section className="arpeggiator-controls-container">
         <div>
           <input id="c1" value="1" type="radio" name="chord" />

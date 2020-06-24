@@ -6,7 +6,9 @@ import SynthsArray from '../../config/step_sequencer/SynthsArray';
 import SynthChoices from '../../config/step_sequencer/SynthChoices';
 import Select from '../../components/Select';
 import Slider from '../../components/Slider';
-import BackButton from '../../components/BackButton';
+import NavButton from '../../components/NavButton';
+import rewind from '../../assets/images/rewind.png';
+import forward from '../../assets/images/forward.png';
 
 export default function StepSequencer() {
   const [notes, setNotes] = useState(NotesArray);
@@ -195,7 +197,8 @@ export default function StepSequencer() {
 
   return (
     <Fragment>
-      <BackButton />
+      <NavButton name="back" link={"/select"} image={rewind} styleName={"back-button"} />
+      <NavButton name="forward" link={"/drum_machine"} image={forward} styleName={"forward-button"} />
       <section className="step-sequencer-controls-container">
         <div>
           <input id="step-row1" className="step-sequencer" type="checkbox" />

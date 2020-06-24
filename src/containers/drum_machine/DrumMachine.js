@@ -4,11 +4,13 @@ import './DrumMachine.css';
 import SampleArray from '../../config/drum_machine/SampleArray';
 import Select from '../../components/Select';
 import Slider from '../../components/Slider';
-import BackButton from '../../components/BackButton';
+import NavButton from '../../components/NavButton';
 import kick from '../../assets/sounds/kick.wav';
 import hat from '../../assets/sounds/hat.wav';
 import snare from '../../assets/sounds/snare.wav';
 import tom from '../../assets/sounds/tom.wav';
+import rewind from '../../assets/images/rewind.png';
+import forward from '../../assets/images/forward.png';
 
 export default function DrumMachine() {
   const [samples] = useState(SampleArray);
@@ -150,7 +152,8 @@ export default function DrumMachine() {
 
   return (
     <Fragment>
-      <BackButton />
+      <NavButton name="back" link={"/select"} image={rewind} styleName={"back-button"} />
+      <NavButton name="forward" link={"/arpeggiator"} image={forward} styleName={"forward-button"} />
       <section className="drum-machine-controls-container">
         <div>
           <input id="row1" className="drum-machine-rows" type="checkbox" />
