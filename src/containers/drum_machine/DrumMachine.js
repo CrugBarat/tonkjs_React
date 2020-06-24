@@ -142,7 +142,7 @@ export default function DrumMachine() {
         setSamples(SampleArray[2]);
         handleSampleSelect(2);
         stopDrumMachine();
-    } else if (sample === 'Tech') {
+    } else if (sample === 'Techno') {
         setKit('Tch');
         setSamples(SampleArray[3]);
         handleSampleSelect(3);
@@ -153,6 +153,7 @@ export default function DrumMachine() {
         handleSampleSelect(4);
         stopDrumMachine();
     } else {
+        setKit('808');
         setSamples(SampleArray[0]);
         handleSampleSelect(0);
         stopDrumMachine();
