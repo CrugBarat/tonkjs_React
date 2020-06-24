@@ -30,6 +30,14 @@ export default function Arpeggiator() {
   let step = 0;
 
   useEffect(() => {
+    document.documentElement.addEventListener(
+      "mousedown", function(){
+      if (Tone.context.state !== 'running') {
+      Tone.context.resume();
+  }})
+  });
+
+  useEffect(() => {
       startSynth();
   }, [chordIndex]);
 
