@@ -82,7 +82,8 @@ p.select-tonk-box {
   width: 500px;
   background-color: black;
   padding-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 

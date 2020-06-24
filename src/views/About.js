@@ -23,7 +23,7 @@ export default function About() {
               <span className="tonk-bold sky-blue"> More info here!</span>
             </a>
           </p>
-          <p className="about-text">Each <span className="tonk-bold purple">TONK-BOX</span> comes equipped with a selection of pads that once triggered play a specific sound when the user presses play. <span className="tonk-bold red">Other features include:</span></p>
+          <p className="about-text">Each <span className="tonk-bold purple">TONK-BOX</span> comes equipped with a selection of pads that once triggered play a specific sound. <span className="tonk-bold red">Other features include:</span></p>
           <ul>
             <li className="pink">Effect manipulation</li>
             <li className="green">Multiple synths/kit presets</li>
