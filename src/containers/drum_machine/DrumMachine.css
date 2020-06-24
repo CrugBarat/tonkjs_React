@@ -39,7 +39,7 @@ input[type='checkbox']:hover, button:hover, select:hover, .controls-container {
   width: 900px;
   background-color: black;
   padding-top: 20px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .drum-machine-values-border {
