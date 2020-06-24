@@ -6,6 +6,14 @@
   width: 95px;
 }
 
+.synth-select {
+  background-color: black;
+  color: white;
+  float: left;
+  margin: 20px 0px 0px 0px;
+  width: 95px;
+}
+
 .select:focus {
   outline-color: #16E6CC;
 }

@@ -17,7 +17,7 @@ export default function StepSequencer() {
   const [synthChoices] = useState(SynthChoices);
   const [currentNote, setCurrentNote] = useState('C3');
   const [rows, setRows] = useState(document.body.querySelectorAll('div > div'));
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
   const [eventID, setEventID] = useState(0);
   const [bpm, setBpm] = useState(120);
   const [phase, setPhase] = useState(0);
@@ -34,6 +34,10 @@ export default function StepSequencer() {
     makeSynthArr(0);
   }, []);
 
+  useEffect(() => {
+    startSynth();
+  }, [notes, playing]);
+
   function getRows() {
     const rows = document.body.querySelectorAll('section > div');
     setRows(rows);
@@ -45,7 +49,6 @@ export default function StepSequencer() {
       synthArr.push(synths[choice]);
     }
     setSynthArr(synthArr);
-    console.log(synthArr);
   }
 
   function startSynth() {
@@ -71,7 +74,6 @@ export default function StepSequencer() {
     if(recording) {
       recordStop();
     }
-    stopSynth();
   }
 
   function repeat() {
@@ -133,6 +135,7 @@ export default function StepSequencer() {
     const newNotes = notes.map(note => note.split('')).map(note => note[0] + (parseInt(note[1])-1).toString());
     setNotes(newNotes);
     setCurrentNote(newNotes[7]);
+    stopSynth();
   }
 
   function increaseOctave() {
@@ -140,6 +143,7 @@ export default function StepSequencer() {
     const newNotes = notes.map(note => note.split('')).map(note => note[0] + (parseInt(note[1])+1).toString());
     setNotes(newNotes);
     setCurrentNote(newNotes[7]);
+    stopSynth();
   }
 
   function onSynthSelect(synth) {
@@ -199,84 +203,84 @@ export default function StepSequencer() {
       <NavButton name="forward" link={"/drum_machine"} image={forward} styleName={"forward-button"} />
       <section className="step-sequencer-controls-container">
         <div>
-          <input id="step-row1" className="step-sequencer" type="checkbox" />
-          <input id="step-row1" className="step-sequencer" type="checkbox" />
-          <input id="step-row1" className="step-sequencer" type="checkbox" />
-          <input id="step-row1" className="step-sequencer" type="checkbox" />
-          <input id="step-row1" className="step-sequencer" type="checkbox" />
-          <input id="step-row1" className="step-sequencer" type="checkbox" />
-          <input id="step-row1" className="step-sequencer" type="checkbox" />
-          <input id="step-row1" className="step-sequencer" type="checkbox" />
+          <input id="step-row1" className="step-sequencer" type="checkbox" onClick={stopSynth} onClick={stopSynth} />
+          <input id="step-row1" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row1" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row1" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row1" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row1" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row1" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row1" className="step-sequencer" type="checkbox" onClick={stopSynth} />
         </div>
         <div>
-          <input id="step-row2" className="step-sequencer" type="checkbox" />
-          <input id="step-row2" className="step-sequencer" type="checkbox" />
-          <input id="step-row2" className="step-sequencer" type="checkbox" />
-          <input id="step-row2" className="step-sequencer" type="checkbox" />
-          <input id="step-row2" className="step-sequencer" type="checkbox" />
-          <input id="step-row2" className="step-sequencer" type="checkbox" />
-          <input id="step-row2" className="step-sequencer" type="checkbox" />
-          <input id="step-row2" className="step-sequencer" type="checkbox" />
+          <input id="step-row2" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row2" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row2" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row2" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row2" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row2" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row2" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row2" className="step-sequencer" type="checkbox" onClick={stopSynth} />
         </div>
         <div>
-          <input id="step-row3" className="step-sequencer" type="checkbox" />
-          <input id="step-row3" className="step-sequencer" type="checkbox" />
-          <input id="step-row3" className="step-sequencer" type="checkbox" />
-          <input id="step-row3" className="step-sequencer" type="checkbox" />
-          <input id="step-row3" className="step-sequencer" type="checkbox" />
-          <input id="step-row3" className="step-sequencer" type="checkbox" />
-          <input id="step-row3" className="step-sequencer" type="checkbox" />
-          <input id="step-row3" className="step-sequencer" type="checkbox" />
+          <input id="step-row3" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row3" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row3" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row3" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row3" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row3" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row3" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row3" className="step-sequencer" type="checkbox" onClick={stopSynth} />
         </div>
         <div>
-          <input id="step-row4" className="step-sequencer" type="checkbox" />
-          <input id="step-row4" className="step-sequencer" type="checkbox" />
-          <input id="step-row4" className="step-sequencer" type="checkbox" />
-          <input id="step-row4" className="step-sequencer" type="checkbox" />
-          <input id="step-row4" className="step-sequencer" type="checkbox" />
-          <input id="step-row4" className="step-sequencer" type="checkbox" />
-          <input id="step-row4" className="step-sequencer" type="checkbox" />
-          <input id="step-row4" className="step-sequencer" type="checkbox" />
+          <input id="step-row4" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row4" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row4" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row4" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row4" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row4" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row4" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row4" className="step-sequencer" type="checkbox" onClick={stopSynth} />
         </div>
         <div>
-          <input id="step-row5" className="step-sequencer" type="checkbox" />
-          <input id="step-row5" className="step-sequencer" type="checkbox" />
-          <input id="step-row5" className="step-sequencer" type="checkbox" />
-          <input id="step-row5" className="step-sequencer" type="checkbox" />
-          <input id="step-row5" className="step-sequencer" type="checkbox" />
-          <input id="step-row5" className="step-sequencer" type="checkbox" />
-          <input id="step-row5" className="step-sequencer" type="checkbox" />
-          <input id="step-row5" className="step-sequencer" type="checkbox" />
+          <input id="step-row5" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row5" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row5" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row5" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row5" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row5" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row5" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row5" className="step-sequencer" type="checkbox" onClick={stopSynth} />
         </div>
         <div>
-          <input id="step-row6" className="step-sequencer" type="checkbox" />
-          <input id="step-row6" className="step-sequencer" type="checkbox" />
-          <input id="step-row6" className="step-sequencer" type="checkbox" />
-          <input id="step-row6" className="step-sequencer" type="checkbox" />
-          <input id="step-row6" className="step-sequencer" type="checkbox" />
-          <input id="step-row6" className="step-sequencer" type="checkbox" />
-          <input id="step-row6" className="step-sequencer" type="checkbox" />
-          <input id="step-row6" className="step-sequencer" type="checkbox" />
+          <input id="step-row6" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row6" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row6" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row6" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row6" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row6" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row6" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row6" className="step-sequencer" type="checkbox" onClick={stopSynth} />
         </div>
         <div>
-          <input id="step-row7" className="step-sequencer" type="checkbox" />
-          <input id="step-row7" className="step-sequencer" type="checkbox" />
-          <input id="step-row7" className="step-sequencer" type="checkbox" />
-          <input id="step-row7" className="step-sequencer" type="checkbox" />
-          <input id="step-row7" className="step-sequencer" type="checkbox" />
-          <input id="step-row7" className="step-sequencer" type="checkbox" />
-          <input id="step-row7" className="step-sequencer" type="checkbox" />
-          <input id="step-row7" className="step-sequencer" type="checkbox" />
+          <input id="step-row7" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row7" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row7" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row7" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row7" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row7" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row7" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row7" className="step-sequencer" type="checkbox" onClick={stopSynth} />
         </div>
         <div>
-          <input id="step-row8" className="step-sequencer" type="checkbox" />
-          <input id="step-row8" className="step-sequencer" type="checkbox" />
-          <input id="step-row8" className="step-sequencer" type="checkbox" />
-          <input id="step-row8" className="step-sequencer" type="checkbox" />
-          <input id="step-row8" className="step-sequencer" type="checkbox" />
-          <input id="step-row8" className="step-sequencer" type="checkbox" />
-          <input id="step-row8" className="step-sequencer" type="checkbox" />
-          <input id="step-row8" className="step-sequencer" type="checkbox" />
+          <input id="step-row8" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row8" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row8" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row8" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row8" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row8" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row8" className="step-sequencer" type="checkbox" onClick={stopSynth} />
+          <input id="step-row8" className="step-sequencer" type="checkbox" onClick={stopSynth} />
         </div>
 
           <div className="step-sequencer-values-border">
@@ -316,10 +320,7 @@ export default function StepSequencer() {
           </div>
           <div className="step-sequencer-media-border">
             <div className="step-sequencer-media-controls-container">
-              <div className="step-sequencer-main-control">
-                <button className="step-sequencer" name="play" onClick={startSynth}></button>
-              </div>
-                <div className="step-sequencer-sub-controls">
+              <div className="step-sequencer-sub-controls">
                 <div>
                   <button className="step-sequencer" name="record" onClick={recordStart}></button>
                 </div>
@@ -329,7 +330,7 @@ export default function StepSequencer() {
               </div>
             </div>
           </div>
-          <Select styleName={"select"} choices={synthChoices} onSelect={onSynthSelect} name={"Synths"} />
+          <Select styleName={"synth-select"} choices={synthChoices} onSelect={onSynthSelect} name={"Synths"} />
           <div className="step-sequencer-oct-container">
            <button className="step-sequencer-oct-decrease-button" onClick={reduceOctave}>-</button>
            <span> OCT </span>
