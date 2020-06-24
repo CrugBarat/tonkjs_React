@@ -131,32 +131,28 @@ export default function DrumMachine() {
      setSampler(new Tone.Sampler(newSampleObj));
    }
 
+   function runOnSampleSelect(num) {
+     setSamples(SampleArray[num]);
+     handleSampleSelect(num);
+     stopDrumMachine();
+   }
+
   function onSampleSelect(sample) {
     if(sample === 'Electro') {
         setKit('Elt');
-        setSamples(SampleArray[1]);
-        handleSampleSelect(1);
-        stopDrumMachine();
+        runOnSampleSelect(1)
     } else if (sample === 'Acoustic') {
         setKit('Act');
-        setSamples(SampleArray[2]);
-        handleSampleSelect(2);
-        stopDrumMachine();
+        runOnSampleSelect(2)
     } else if (sample === 'Techno') {
         setKit('Tch');
-        setSamples(SampleArray[3]);
-        handleSampleSelect(3);
-        stopDrumMachine();
+        runOnSampleSelect(3)
     } else if (sample === 'FX') {
         setKit('Fx');
-        setSamples(SampleArray[4]);
-        handleSampleSelect(4);
-        stopDrumMachine();
+        runOnSampleSelect(4)
     } else {
         setKit('808');
-        setSamples(SampleArray[0]);
-        handleSampleSelect(0);
-        stopDrumMachine();
+        runOnSampleSelect(0)
     }
   }
 
