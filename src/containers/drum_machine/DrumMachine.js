@@ -2,19 +2,20 @@ import React, {Fragment, useState, useEffect} from 'react';
 import Tone from 'tone';
 import './DrumMachine.css';
 import SampleArray from '../../config/drum_machine/SampleArray';
+import SampleChoices from '../../config/drum_machine/SampleChoices';
 import Select from '../../components/Select';
 import Slider from '../../components/Slider';
 import NavButton from '../../components/NavButton';
-import kick from '../../assets/sounds/kick.wav';
-import hat from '../../assets/sounds/hat.wav';
-import snare from '../../assets/sounds/snare.wav';
-import tom from '../../assets/sounds/tom.wav';
+import kick from '../../assets/sounds/808/kick.wav';
+import hat from '../../assets/sounds/808/hat.wav';
+import snare from '../../assets/sounds/808/snare.wav';
+import tom from '../../assets/sounds/808/tom.wav';
 import rewind from '../../assets/images/rewind.png';
 import forward from '../../assets/images/forward.png';
 
 export default function DrumMachine() {
-  const [samples] = useState(SampleArray);
-  const [sampler] = useState(new Tone.Sampler({"E1": kick, "E3": snare, "E5": hat, "E2": tom}));
+  const [samples, setSamples] = useState(SampleArray[0]);
+  const [sampler, setSampler] = useState(new Tone.Sampler({"E1": kick, "E3": snare, "E5": hat, "E2": tom}));
   const [rows, setRows] = useState(document.body.querySelectorAll('div > div'));
   const [playing, setPlaying] = useState(false);
   const [eventID, setEventID] = useState(0);
@@ -22,7 +23,7 @@ export default function DrumMachine() {
   const [distortion, setDistortion] = useState(0.0);
   const [gain, setGain] = useState(1.0);
   const [delay, setDelay] = useState(0.0);
-  const [sampleChoices] = useState(['808']);
+  const [sampleChoices] = useState(SampleChoices);
   const [kit, setKit] = useState('808');
   const [recDest] = useState(Tone.context.createMediaStreamDestination());
   const [recorder, setRecorder] = useState(null);
@@ -119,6 +120,43 @@ export default function DrumMachine() {
     sampler.toMaster();
     setDelay(0);
     setDistortion(0);
+  }
+
+  function handleSampleSelect(num) {
+     let newSampleObj = {};
+     for(let i=0; i < SampleArray[num].length; i++) {
+       let key = Object.keys(SampleArray[num][i][0])
+       newSampleObj[key] = SampleArray[num][i][0][key]
+     }
+     setSampler(new Tone.Sampler(newSampleObj));
+   }
+
+  function onSampleSelect(sample) {
+    if(sample === 'Electro') {
+        setKit('Elt');
+        setSamples(SampleArray[1]);
+        handleSampleSelect(1);
+        stopDrumMachine();
+    } else if (sample === 'Acoustic') {
+        setKit('Act');
+        setSamples(SampleArray[2]);
+        handleSampleSelect(2);
+        stopDrumMachine();
+    } else if (sample === 'Tech') {
+        setKit('Tch');
+        setSamples(SampleArray[3]);
+        handleSampleSelect(3);
+        stopDrumMachine();
+    } else if (sample === 'FX') {
+        setKit('Fx');
+        setSamples(SampleArray[4]);
+        handleSampleSelect(4);
+        stopDrumMachine();
+    } else {
+        setSamples(SampleArray[0]);
+        handleSampleSelect(0);
+        stopDrumMachine();
+    }
   }
 
   function recordStart() {
@@ -287,7 +325,7 @@ export default function DrumMachine() {
               <button className="drum-machine-destroy-buttons drum-machine-clear-button" onClick={clearDrumMachine}>CLEAR</button>
             </div>
             <div>
-              <Select styleName={"sample-select"} choices={sampleChoices} name={"Kits"} />
+              <Select styleName={"sample-select"} choices={sampleChoices} name={"Kits"} onSelect={onSampleSelect}/>
             </div>
             <h3 className="drum-tonk-label">TONK.js</h3>
         </div>
