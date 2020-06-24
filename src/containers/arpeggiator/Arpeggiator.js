@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import Tone from 'tone';
 import mapChords from '../../helpers/arpeggiator/mapChords';
 import SynthChoices from '../../config/arpeggiator/SynthChoices';
@@ -12,9 +12,9 @@ import forward from '../../assets/images/forward.png';
 
 export default function Arpeggiator() {
   const [synth, setSynth] = useState(new Tone.Synth());
-  const [chordIndex, setChordIndex] = useState(0);
+  const [chordIndex, setChordIndex] = useState(-1);
   const [formattedChords] = useState(mapChords);
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
   const [duration, setDuration] = useState('16n');
   const [synthChoices] = useState(SynthChoices);
   const [durationChoices] = useState(DurationChoices);
@@ -29,9 +29,14 @@ export default function Arpeggiator() {
 
   let step = 0;
 
+  useEffect(() => {
+      startSynth();
+  }, [chordIndex]);
+
   function handleChord(value) {
     setChordIndex(parseInt(value) - 1);
     getOrder(parseInt(value) - 1);
+    stopSynth();
   }
 
   function repeat(time) {
@@ -62,24 +67,31 @@ export default function Arpeggiator() {
     if(synth === 'AMSynth') {
         setSynth(new Tone.AMSynth());
         setPlaying(false);
+        stopSynth();
     } else if (synth === 'DuoSynth') {
         setSynth(new Tone.DuoSynth());
         setPlaying(false);
+        stopSynth();
     } else if (synth === 'FMSynth') {
         setSynth(new Tone.FMSynth());
         setPlaying(false);
+        stopSynth();
     } else if (synth === 'MembraneSynth') {
         setSynth(new Tone.MembraneSynth());
         setPlaying(false);
+        stopSynth();
     } else if (synth === 'PluckSynth') {
         setSynth(new Tone.PluckSynth());
         setPlaying(false);
+        stopSynth();
     } else if (synth === 'PolySynth') {
         setSynth(new Tone.PolySynth());
         setPlaying(false);
+        stopSynth();
     } else {
         setSynth(new Tone.Synth());
         setPlaying(false);
+        stopSynth();
     }
   }
 
@@ -87,15 +99,19 @@ export default function Arpeggiator() {
     if(duration === '4n') {
         setDuration('4n');
         setPlaying(false);
+        stopSynth();
     } else if (duration === '8n') {
         setDuration('8n');
         setPlaying(false);
+        stopSynth();
     } else if (duration === '16n') {
         setDuration('16n');
         setPlaying(false);
+        stopSynth();
     } else {
         setDuration('32n');
         setPlaying(false);
+        stopSynth();
     }
   }
 
