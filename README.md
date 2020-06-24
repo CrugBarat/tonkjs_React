@@ -43,6 +43,16 @@ Cycles through a series of notes according to clock rate and note division. The 
 
 ---
 
+# Class vs Functional Components
+
+TONK.js was built using pure functional components with hooks. The original instruments were built using class components. Check out their repos here:
+
+- [Step Sequencer](https://github.com/CrugBarat/step_sequencer_React)
+- [Drum Machine](https://github.com/CrugBarat/drum_machine_React)
+- [Arpeggiator](https://github.com/CrugBarat/arpeggiator_React)
+
+---
+
 # Setup
 
 - Download the files
