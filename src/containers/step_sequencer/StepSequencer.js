@@ -106,6 +106,7 @@ export default function StepSequencer() {
     setPhase(parseFloat(phase));
     const phaser = new Tone.Phaser(phase).toMaster();
     synths.forEach(synth => synth.connect(phaser));
+    setPlaying(false);
   }
 
   function updateGain(gain) {
@@ -337,7 +338,7 @@ export default function StepSequencer() {
            <button className="step-sequencer-oct-increase-button" onClick={increaseOctave}>+</button>
          </div>
           <div className="step-sequencer-destroy-container">
-            <button className="step-sequencer-destroy-buttons" onClick={resetDelay}>RESET DELAY</button>
+            <button className="step-sequencer-destroy-buttons step-sequencer-reset" onClick={resetDelay}>RESET</button>
             <button className="step-sequencer-destroy-buttons" onClick={clearSequencer}>CLEAR</button>
             <h3 className="step-tonk-label">TONK.js</h3>
           </div>
