@@ -289,6 +289,7 @@ export default function DrumMachine() {
             <div>
               <Select styleName={"sample-select"} choices={sampleChoices} name={"Kits"} />
             </div>
+            <h3 className="drum-tonk-label">TONK.js</h3>
         </div>
       </section>
     </Fragment>

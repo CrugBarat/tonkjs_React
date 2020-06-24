@@ -48,7 +48,7 @@ input[type='checkbox']:hover, button:hover, select:hover, .controls-container {
   width: 450px;
   padding: 20px;
   margin: 20px;
-  margin-left: 125px;
+  margin-left: 115px;
   float: left;
 }
 
@@ -161,7 +161,7 @@ button[name="stop"]:focus {
   border: solid 1px white;
   width: 490px;
   float: left;
-  margin-left: 125px;
+  margin-left: 115px;
   margin-bottom: 30px;
 }
 
@@ -196,7 +196,6 @@ button {
 }
 
 .drum-machine-reset-buttons {
-  margin-top: 30px;
   padding-left: 35px;
   padding-right: 35px;
 }
@@ -212,10 +211,18 @@ button {
 
 .drum-machine-reset-but-container {
   display: inline-block;
-  margin-right: 95px;
+  margin-right: 105px;
+  margin-top: 7px;
 }
 
 .drum-machine-clear-but-container {
   display: inline-block;
-  margin-right: 75px;
+  margin-right: 85px;
+}
+
+.drum-tonk-label {
+  width: 80px;
+  font-size: 30px;
+  margin: 5px 20px 0px 45px;
+  float: left;
 }
