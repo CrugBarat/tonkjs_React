@@ -3,7 +3,6 @@ const SynthChoices = [
                         'DuoSynth',
                         'FMSynth',
                         'MembraneSynth',
-                        'MonoSynth',
                         'PluckSynth',
                         'PolySynth',
                         'Default'

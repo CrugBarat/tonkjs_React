@@ -45,6 +45,7 @@ export default function StepSequencer() {
       synthArr.push(synths[choice]);
     }
     setSynthArr(synthArr);
+    console.log(synthArr);
   }
 
   function startSynth() {
@@ -154,11 +155,8 @@ export default function StepSequencer() {
     } else if (synth === 'MembraneSynth') {
         makeSynthArr(4);
         setPlaying(false);
-    } else if (synth === 'MonoSynth') {
-        makeSynthArr(5);
-        setPlaying(false);
     } else if (synth === 'PluckSynth') {
-        makeSynthArr(6);
+        makeSynthArr(5);
         setPlaying(false);
     } else {
         makeSynthArr(0);

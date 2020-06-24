@@ -71,9 +71,6 @@ export default function Arpeggiator() {
     } else if (synth === 'MembraneSynth') {
         setSynth(new Tone.MembraneSynth());
         setPlaying(false);
-    } else if (synth === 'MonoSynth') {
-        setSynth(new Tone.MonoSynth());
-        setPlaying(false);
     } else if (synth === 'PluckSynth') {
         setSynth(new Tone.PluckSynth());
         setPlaying(false);

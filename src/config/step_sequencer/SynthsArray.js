@@ -6,7 +6,6 @@ const SynthsArray = [
                       new Tone.DuoSynth(),
                       new Tone.FMSynth(),
                       new Tone.MembraneSynth(),
-                      new Tone.MonoSynth(),
                       new Tone.PluckSynth()
                     ]
 
