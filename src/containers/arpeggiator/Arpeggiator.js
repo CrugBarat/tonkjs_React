@@ -5,6 +5,7 @@ import SynthChoices from '../../config/arpeggiator/SynthChoices';
 import DurationChoices from '../../config/arpeggiator/DurationChoices';
 import Select from '../../components/Select';
 import Slider from '../../components/Slider';
+import BackButton from '../../components/BackButton';
 import './Arpeggiator.css';
 
 export default function Arpeggiator() {
@@ -166,6 +167,7 @@ export default function Arpeggiator() {
 
   return (
     <Fragment>
+    <BackButton />
     <section className="arpeggiator-controls-container">
         <div>
           <input id="c1" value="1" type="radio" name="chord" />

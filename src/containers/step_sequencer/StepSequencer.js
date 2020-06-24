@@ -6,6 +6,7 @@ import SynthsArray from '../../config/step_sequencer/SynthsArray';
 import SynthChoices from '../../config/step_sequencer/SynthChoices';
 import Select from '../../components/Select';
 import Slider from '../../components/Slider';
+import BackButton from '../../components/BackButton';
 
 export default function StepSequencer() {
   const [notes, setNotes] = useState(NotesArray);
@@ -194,6 +195,7 @@ export default function StepSequencer() {
 
   return (
     <Fragment>
+      <BackButton />
       <section className="step-sequencer-controls-container">
         <div>
           <input id="step-row1" className="step-sequencer" type="checkbox" />

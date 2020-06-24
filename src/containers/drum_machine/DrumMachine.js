@@ -4,6 +4,7 @@ import './DrumMachine.css';
 import SampleArray from '../../config/drum_machine/SampleArray';
 import Select from '../../components/Select';
 import Slider from '../../components/Slider';
+import BackButton from '../../components/BackButton';
 import kick from '../../assets/sounds/kick.wav';
 import hat from '../../assets/sounds/hat.wav';
 import snare from '../../assets/sounds/snare.wav';
@@ -149,6 +150,7 @@ export default function DrumMachine() {
 
   return (
     <Fragment>
+      <BackButton />
       <section className="drum-machine-controls-container">
         <div>
           <input id="row1" className="drum-machine-rows" type="checkbox" />
