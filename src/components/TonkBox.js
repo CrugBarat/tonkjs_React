@@ -15,9 +15,7 @@ const TonkBox = (props) => {
             <div className={props.tonkbox.blur}></div>
             <div className={props.tonkbox.capText}>
             <p className="tonk-box-title">{props.tonkbox.name}</p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p className="tonk-box-description">{props.tonkbox.description}</p>
             </div>
           </div>
         </div>
