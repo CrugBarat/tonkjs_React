@@ -13,6 +13,8 @@ A front-end music app built using:
 
 **Markup/Styling**: HTML5/CSS3
 
+**Demo**: [TONK.js](https://tonkjs.herokuapp.com/)
+
 The desktop browser app has 3 instrument types: step sequencer, drum machine and arpeggiator. Each instrument uses a selection of pads that once triggered play a specific sound. Other features include:
 
 - Effect manipulation
