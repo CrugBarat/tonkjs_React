@@ -73,6 +73,65 @@ p.select-tonk-box {
   opacity: 0.7;
   cursor: pointer;
 }
-
-
 /* SELECT END */
+
+/* ABOUT */
+.about-container {
+  display: inline-block;
+  border: solid;
+  width: 500px;
+  background-color: black;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.about-text {
+  font-size: 20px;
+  padding: 15px;
+}
+
+.tonk-bold {
+  font-weight: 700;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+.purple {
+  color: #9201ff;
+}
+
+.sky-blue {
+  color: #1be7ff;
+}
+
+.teal {
+  color: #16E6CC;
+}
+
+.green {
+  color: #2EF9A0;
+}
+
+.lime {
+  color: #67FF6C;
+}
+
+.yellow {
+  color: #E7C501;
+}
+
+.red {
+  color: #FF6A63;
+}
+
+.pink {
+    color: #E830CE;
+}

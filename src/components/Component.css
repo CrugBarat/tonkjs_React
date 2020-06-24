@@ -221,7 +221,12 @@ a {
   z-index: 100;
 }
 
-.back-button:hover, .back-button:focus, .forward-button:hover, .forward-button:focus  {
+.about-back-button {
+  width: 30px;
+  margin: 5px;
+}
+
+.back-button:hover, .back-button:focus, .forward-button:hover, .forward-button:focus, .about-back-button:hover, .about-back-button:focus  {
   opacity: 0.7;
   cursor: pointer;
 }
