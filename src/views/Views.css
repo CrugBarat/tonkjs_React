@@ -59,4 +59,15 @@ p.select-tonk-box {
   font-size: 35px;
 }
 
+.link-logo {
+  width: 30px;
+  margin: 5px;
+}
+
+.link-logo:hover, .link-logo:focus{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+
 /* SELECT END */
