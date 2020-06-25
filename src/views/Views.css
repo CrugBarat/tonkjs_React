@@ -83,23 +83,26 @@
   }
 }
 
-/* @keyframes delayEffect {
-  99% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-} */
-
 .homepage-button-container {
-  border: solid;
   width: 70px;
-  height: 70px;
+  height: 60px;
+  margin: 5px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 100;
   animation: flash 0.8s linear infinite;
+  animation-delay: 5s;
+  -webkit-animation-delay: 5s;
 }
 
 @keyframes flash {
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes flash {
   50% {
     opacity: 0;
   }

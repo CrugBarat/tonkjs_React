@@ -27,11 +27,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="homepage-button-container-delay">
         <div className="homepage-button-container">
           <NavButton name="forward" link={"/select"} image={forward} styleName={"forward-button"} />
         </div>
-      </div>
     </Fragment>
   )
 }
