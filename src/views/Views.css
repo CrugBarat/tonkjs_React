@@ -5,8 +5,6 @@
   overflow: auto;
   display: block;
   text-align: center;
-  position: absolute;
-  z-index: 1;
   background-image: url('../assets/images/background.png');
   background-position: center;
   background-size: cover;
@@ -15,17 +13,96 @@
 }
 
 .homepage-title {
-  margin-top: 170px;
+  top: 20%;
+  right: 10%;
   display: inline-block;
   font-size: 15vw;
   color: white;
-  font-family: 'Russo One', sans-serif;
   text-shadow: 2px 2px 4px #000000;
+  z-index: 1;
+  position: absolute;
 }
 
+.beep-title {
+  -webkit-animation: fadeinout 1.5s linear forwards;
+   animation: fadeinout 1.5s linear forwards;
+   opacity: 0;
+   z-index: 1;
+}
+
+.bop-title {
+  -webkit-animation: fadeinout 1.5s linear forwards;
+   animation: fadeinout 1.5s linear forwards;
+   animation-delay: 1.3s;
+   -webkit-animation-delay: 1.3s;
+   opacity: 0;
+   z-index: 2;
+}
+
+.boop-title {
+  -webkit-animation: fadeinout 1.5s linear forwards;
+   animation: fadeinout 1.5s linear forwards;
+   animation-delay: 2.6s;
+   -webkit-animation-delay: 2.6s;
+   opacity: 0;
+  z-index: 3;
+}
+
+.tonk-title {
+  -webkit-animation: fadeIn 1.5s linear forwards;
+   animation: fadeIn 1.5s linear forwards;
+   animation-delay: 3.9s;
+   -webkit-animation-delay: 3.9s;
+   opacity: 0;
+   z-index: 4;
+}
+
+@-webkit-keyframes fadeinout {
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  50% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* @keyframes delayEffect {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+} */
+
 .homepage-button-container {
-  display: inline-block;
-  width: 50px;
+  border: solid;
+  width: 70px;
+  height: 70px;
+  animation: flash 0.8s linear infinite;
+}
+
+@keyframes flash {
+  50% {
+    opacity: 0;
+  }
 }
 /* HOMEPAGE END */
 

@@ -9,9 +9,29 @@ export default function Home() {
   return (
     <Fragment>
       <div className="homepage-title-container">
-        <h3 className="homepage-title">TONK.js</h3>
+        <div className="animation-container">
+          <div className="homepage-title beep-title">
+            <h3>BEEP.js</h3>
+          </div>
+          <div className="homepage-title bop-title">
+            <h3>BOP.js</h3>
+          </div>
+          <div className="homepage-title boop-title">
+            <h3>BOOP.js</h3>
+          </div>
+          <div className="homepage-title tonk-title">
+            <h3>TONK.js</h3>
+          </div>
+          <div className="homepage-title">
+            <h3>.js</h3>
+          </div>
+        </div>
       </div>
-      <NavButton name="forward" link={"/select"} image={forward} styleName={"forward-button"} />
+      <div className="homepage-button-container-delay">
+        <div className="homepage-button-container">
+          <NavButton name="forward" link={"/select"} image={forward} styleName={"forward-button"} />
+        </div>
+      </div>
     </Fragment>
   )
 }
