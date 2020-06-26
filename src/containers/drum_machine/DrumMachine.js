@@ -52,7 +52,6 @@ export default function DrumMachine() {
       let sample = samples[i];
       let row = rows[i];
       let input = row.querySelector(`input:nth-child(${step + 1})`);
-      console.log(index);
       if (input.checked) {
         sampler.triggerAttackRelease(Object.keys(sample[0]), '16n');
       }
