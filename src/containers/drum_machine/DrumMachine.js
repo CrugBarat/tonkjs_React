@@ -28,6 +28,7 @@ export default function DrumMachine() {
   const [recDest] = useState(Tone.context.createMediaStreamDestination());
   const [recorder, setRecorder] = useState(null);
   const [recording, setRecording] = useState(false);
+    const [samplesLoaded, setSamplesLoaded] = useState(true);
 
   let index = 0;
 
@@ -60,7 +61,7 @@ export default function DrumMachine() {
   }
 
   function startDrumMachine() {
-    if(!playing) {
+    if(!playing && samplesLoaded) {
       stopDrumMachine();
       sampler.disconnect();
       sampler.connect(recDest);
@@ -69,6 +70,7 @@ export default function DrumMachine() {
       setEventID(eventID);
       Tone.Transport.start();
       setPlaying(true);
+      setSamplesLoaded(false);
     }
   }
 
@@ -142,6 +144,7 @@ export default function DrumMachine() {
      setSamples(SampleArray[num]);
      handleSampleSelect(num);
      stopDrumMachine();
+     setSamplesLoaded(true);
    }
 
   function onSampleSelect(sample) {
